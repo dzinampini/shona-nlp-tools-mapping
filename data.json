@@ -1,0 +1,153 @@
+{
+  "shona": {
+    "nlp_tools": {
+      "tokenisors": [
+        {
+          "title": "Tokenisor in Shona spaCy",
+          "sources": ["H. Masoka, ‘Shona spaCy: A Morphological Analyzer for an Under-Resourced Bantu Language’, Nov. 12, 2025, arXiv: arXiv:2511.16680. doi: 10.48550/arXiv.2511.16680."],
+          "description": "Tokenisation is integrated within a morphology-aware processing pipeline rather than implemented as a standalone tokenizer. Token boundaries are guided by Shona noun class markers rather than whitespace alone.",
+          "approach": "rule based",
+          "model_or_algorithm": "symbolic rules",
+          "link": "https://github.com/HappymoreMasoka/shona-spacy"
+        }
+      ],
+      "morphology_analysers": [
+        {
+          "title": "Riddings & Mavhu (2002) Conceptual Framework",
+          "sources": ["D. Ridings and W. Mavhu, ‘Problems and Challenges Encountered when Developing a Morphological Parser for the Shona Language’, African Languages Research Institute, Grahamstown, South Africa, Jul. 2002."], 
+          "description": "Proposed development of grammatical parsers, syntactic analysers and spell checkers as foundations for a Shona morphological analyser. No implementation was reported.",
+          "approach": "conceptual",
+          "model_or_algorithm": "conceptual framework"
+        },
+        {
+          "title": "Mashoko",
+          "sources": ["F. Kambarami, ‘ut Of Vocabulary Words in Spell- checking for Southern Bantu Languages: a morphological analysis-based approach for Shona’, Chninhoyi University of Technology, Chinhoyi, 2021."],
+          "description": "Rule-based Shona morphological analyser designed to process out-of-vocabulary words using lexical lookup and morphological decomposition.",
+          "approach": "rule based",
+          "model_or_algorithm": "finite state automata (FSA) and finite state transducers (FST)"
+        },
+        {
+          "title": "Shona spaCy",
+          "sources": ["H. Masoka, 'Shona spaCy: A Morphological Analyzer for an Under-Resourced Bantu Language', Nov. 12, 2025, arXiv: arXiv:2511.16680. doi: 10.48550/arXiv.2511.16680."],
+          "description": "Publicly available rule-based morphological analyser implemented within spaCy. Performs tokenisation, lexicon lookup, morphological analysis, feature encoding and structured annotation.",
+          "approach": "rule based",
+          "model_or_algorithm": "symbolic rules",
+          "link": "https://github.com/HappymoreMasoka/shona-spacy"
+        }
+      ],
+      "pos_taggers": [
+        {
+          "title": "MasakhaPOS",
+          "sources": ["C. M. B. Dione et al., ‘MasakhaPOS: Part-of-Speech Tagging for Typologically Diverse African languages’, in Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), Toronto, Canada: Association for Computational Linguistics, 2023, pp. 10883–10900. doi: 10.18653/v1/2023.acl-long.609."],
+          "description": "Multilingual African POS tagging framework that includes Shona through cross-lingual transfer.",
+          "approach": "machine learning",
+          "model_or_algorithm": "-"
+        },
+        {
+          "title": "POS Tagging Pipeline in Spacy",
+          "sources": ["H. Masoka, 'Shona spaCy: A Morphological Analyzer for an Under-Resourced Bantu Language', Nov. 12, 2025, arXiv: arXiv:2511.16680. doi: 10.48550/arXiv.2511.16680."],
+          "description": "Morphological pipeline integrating lemma generation, POS tagging and morphological feature extraction for Shona.",
+          "approach": "rule based",
+          "model_or_algorithm": "symbolic rules",
+          "link": "https://github.com/HappymoreMasoka/shona-spacy"
+        }
+      ],
+      "lemmatisers": [],
+      "named_entity_recognisers": [],
+      "parsers": []
+    },
+    "datasets": {
+      "lexical_resources": [
+        {
+          "title": "Duramazwi Guru reChiShona",
+          "description": "Comprehensive Shona dictionary widely cited in literature but not publicly available in digital form.",
+          "sources": ["F. Kambarami, 'Out Of Vocabulary Words in Spell- checking for Southern Bantu Languages: a morphological analysis-based approach for Shona', Chninhoyi University of Technology, Chinhoyi, 2021."],
+          "period": "-",
+          "size": "-"
+        }
+      ],
+      "raw_corpora": [
+        {
+          "title": "Leipzig Corpora Collection (Shona)",
+          "description": "Web-based Shona corpus compiled from online sources.",
+          "sources": ["F. Kambarami, 'Out Of Vocabulary Words in Spell- checking for Southern Bantu Languages: a morphological analysis-based approach for Shona', Chninhoyi University of Technology, Chinhoyi, 2021."],
+          "period": "2012–2018",
+          "size": "258,389 sentences",
+          "link": "https://corpora.wortschatz-leipzig.de/en?corpusId=sna-zw_web_2019"
+        },
+        {
+          "title": "ALLEX Project Shona Corpus",
+          "description": "Corpus used for dictionary development.",
+          "sources": ["F. Kambarami, 'Out Of Vocabulary Words in Spell- checking for Southern Bantu Languages: a morphological analysis-based approach for Shona', Chninhoyi University of Technology, Chinhoyi, 2021."],
+          "period": "-",
+          "size": "Approx 2 million running words"
+        }
+      ],
+      "annotated_corpora": [
+        {
+          "title": "Masoka (2025)",
+          "description": "Annotated for intent, sentiment, dialogue acts, tone and code-mixing.",
+          "sources": ["H. Masoka, 'Advancing Conversational AI with Shona Slang: A Dataset and Hybrid Model for Digital Inclusion', 2025, arXiv. doi: 10.48550/ARXIV.2509.14249."],
+          "period": "",
+          "size": "30,174 records",
+          "link": "https://github.com/HappymoreMasoka/Working_with_shona-slang"
+        },
+        {
+          "title": "ShonaSenti Dataset",
+          "description": "Annotated Shona Twitter sentiment corpus with three-class and five-class sentiment labels.",
+          "sources": ["B. Makuwe, K. R. Mabokela, and T. Schlippe, ‘Sentiment Analysis for Shona’, in 2023 11th International Conference on Affective Computing and Intelligent Interaction (ACII), Cambridge, MA, USA: IEEE, Sep. 2023, pp. 1–8. doi: 10.1109/ACII59096.2023.10388095."],
+          "period": "-",
+          "size": "15,953 records",
+          "link": "https://github.com/barletteM/Shona-Sentiment-Analysis"
+        }
+      ],
+      "domain_specific_corpora": [
+        {
+          "title": "Code-170k-Shona",
+          "description": "Programming-related conversations translated into Shona for coding education.",
+          "sources": ["Mich-Seth Owusu, ‘Code-170k-shona: Programming Conversations in Shona}’. Hugging Face, 2025. [Online]. Available: https://huggingface.co/datasets/michsethowusu/Code-170k-shona. [Accessed: 12-Jun-2025]."],
+          "period": "",
+          "size": "176,999 conversations",
+          "link": "https://huggingface.co/datasets/michsethowusu/Code-170k-shona"
+        }
+      ],
+      "parallel_corpora": [
+        {
+          "title": "English–Shona Bible Corpus (OPUS)",
+          "description": "Parallel Bible corpus for machine translation.",
+          "sources": ["Opus, ‘Shona English Datasets’. Opus, https://opus.nlpl.eu/corpora-search/sn&en, 2024."],
+          "period": "",
+          "size": "912,267 aligned sentence pairs",
+          "link": "https://opus.nlpl.eu/corpora-search/sn&en"
+        },
+        {
+          "title": "Wikimedia Parallel Corpus",
+          "description": "Aligned English–Shona sentences.",
+          "sources": ["Opus, ‘Shona English Datasets’. Opus, https://opus.nlpl.eu/corpora-search/sn&en, 2024."],
+          "period": "-",
+          "size": "23,532 aligned sentence pairs",
+          "link": "https://opus.nlpl.eu/corpora-search/sn&en"
+        }
+      ],
+      "literary_text": []
+    },
+    "applications": {
+      "chatbots": [],
+      "question_answering": [],
+      "machine_translation_systems": [],
+      "spell_checkers": [],
+      "search_systems": [],
+      "voice_assistants": [],
+      "educational_systems": [],
+      "other_text_systems": [
+        {
+          "title": "ShonaSenti",
+          "description": "Annotated Shona Twitter sentiment corpus with three-class and five-class sentiment labels.",
+          "sources": ["B. Makuwe, K. R. Mabokela, and T. Schlippe, ‘Sentiment Analysis for Shona’, in 2023 11th International Conference on Affective Computing and Intelligent Interaction (ACII), Cambridge, MA, USA: IEEE, Sep. 2023, pp. 1–8. doi: 10.1109/ACII59096.2023.10388095."],
+          "task": "sentiment analysis",
+          "link": "https://github.com/barletteM/Shona-Sentiment-Analysis"
+        }
+      ]
+    }
+  }
+}

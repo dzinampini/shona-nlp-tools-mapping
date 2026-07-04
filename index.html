@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shona NLP Ecosystem</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f5f7fb;
+            color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #144272 0%, #0f4c81 100%);
+        }
+
+        .section-card {
+            border: 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-title {
+            color: #144272;
+        }
+
+        .bg-purple {
+            background-color: #7b1fa2 !important;
+            color: white;
+        }
+
+        footer {
+            background: #0f172a;
+        }
+
+        .display-6 {
+            font-size: 1.5rem;
+        }
+
+        .category-text {
+            font-size: 0.75rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="hero text-white py-2">
+        <div class="container py-2 text-center">
+            <h1 class="display-5 fw-bold">Shona NLP Ecosystem</h1>
+            <p class="lead mb-0">Mapping of Shona Language Processing Tools and Datasets</p>
+        </div>
+    </header>
+
+    <div class="container py-4 py-lg-5">
+
+
+        <section class="card section-card mb-4">
+            <div class="card-body">
+                <p class="mb-0">
+                    Research on Shona Natural Language Processing is currently scattered across
+                    journal papers, conference proceedings, theses and software repositories.
+                    This project brings those resources together into a single searchable catalogue.
+                    By making existing tools and datasets visible, researchers can identify gaps,
+                    avoid duplication of effort, encourage collaboration and focus future work on
+                    areas that remain underdeveloped.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-4">
+            <h2 class="h4 fw-semibold mb-3">Tools</h2>
+            <div class="row g-4" id="tools"></div>
+        </section>
+
+        <section class="mb-4">
+            <h2 class="h4 fw-semibold mb-3">Datasets</h2>
+            <div class="row g-4" id="datasets"></div>
+        </section>
+
+
+        <section class="mb-4">
+            <h2 class="h4 fw-semibold mb-3">Applications</h2>
+            <div class="row g-4" id="applications"></div>
+        </section>
+
+        <section>
+            <h2 class="h4 fw-semibold mb-3">Explore</h2>
+
+            <div class="row g-3 mb-4">
+                <div class="col-lg-8">
+                    <input type="text" id="search" class="form-control form-control-lg"
+                        placeholder="Search tools, datasets, algorithms...">
+                </div>
+                <div class="col-lg-4">
+                    <select id="typeFilter" class="form-select form-select-lg">
+                        <option value="all">Everything</option>
+                        <option value="tool">Tools</option>
+                        <option value="dataset">Datasets</option>
+                        <option value="application">Applications</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4" id="results"></div>
+        </section>
+
+    </div>
+
+    <footer class="bg-dark text-light py-5 mt-5 border-top border-secondary">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Contributing</h2>
+            <p class="text-secondary mb-0 mx-auto" style="max-width:800px;">
+                This project is community-driven. Whether you're a researcher,
+                linguist, software developer, or simply aware of Shona NLP
+                resources, your contribution helps build a comprehensive,
+                openly accessible ecosystem map.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- About -->
+            <div class="col-lg-4">
+                <div class="card bg-light border-secondary h-100">
+                    <div class="card-body">
+
+                        <h5 class="card-title mb-3">
+                            Why Contribute?
+                        </h5>
+
+                        <p class="card-text text-light-emphasis">
+                            Many Shona NLP tools and datasets remain scattered
+                            across research papers, theses and repositories.
+                            By contributing, you help improve discoverability,
+                            reduce duplicated effort and strengthen future
+                            research.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Developers -->
+            <div class="col-lg-4">
+                <div class="card bg-light border-secondary h-100">
+                    <div class="card-body">
+
+                        <h5 class="card-title mb-3">
+                            Developers
+                        </h5>
+
+                        <ol class="small ps-3 mb-3">
+                            <li>Fork the repository.</li>
+                            <li>Create a new branch.</li>
+                            <li>Update <code>data.json</code>.</li>
+                            <li>Add supporting references.</li>
+                            <li>Submit a Pull Request.</li>
+                        </ol>
+
+                        <a
+                            href="https://github.com/dzinampini/shona-nlp-tools-mapping"
+                            target="_blank"
+                            class="btn btn-outline-dark btn-sm w-100">
+
+                            View GitHub Repository
+
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-lg-4">
+                <div class="card bg-light border-secondary h-100">
+                    <div class="card-body">
+
+                        <h5 class="card-title mb-3">
+                            Non-Technical Contributors
+                        </h5>
+
+                        <p class="small text-light-emphasis">
+                            Don't write code? No problem. Get in touch using:
+                        </p>
+
+
+                        <p class="mb-2">
+                            
+                            <strong>Email</strong><br>
+                            <a href="mailto:dzinampini@gmail.com"
+                               class="text-decoration-none text-info">
+                                dzinampini [at] gmail [dot] com
+                            </a>
+                        </p>
+
+                        <p class="mb-2">
+                            <strong>Call/WhatsApp</strong><br>
+                            <a href="tel:+26774099422"
+                               class="text-decoration-none text-info">
+                                +267 74 099 422
+                            </a> 
+                            | 
+                            <a href="tel:+263774756502"
+                               class="text-decoration-none text-info">
+                                +263 774 756 502
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="my-5 border-secondary">
+
+        <div class="text-center text-secondary small">
+            <p class="mb-1">
+                Content is intended for research and educational use.
+                Contributors retain credit for their work while allowing the community to build upon this ecosystem map.
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+    <script>
+
+        let allItems = [];
+
+        fetch("data.json")
+            .then(r => r.json())
+            .then(data => {
+
+                const shona = data.shona;
+
+                let tools = 0;
+                let datasets = 0;
+
+                tools_counter = {
+                    tokenisors: 0,
+                    morphological_analysers: 0,
+                    pos_taggers: 0,
+                    lemmatisers: 0,
+                    parsers: 0,
+                    named_entity_recognisers: 0
+                }
+
+
+                datasets_counter = {
+                    lexical_resources: 0,
+                    raw_corpora: 0,
+                    annotated_corpora: 0,
+                    domain_specific_corpora: 0,
+                    parallel_corpora: 0,
+                    literary_text: 0
+                }
+
+                applications_counter = {
+                    chatbots: 0,
+                    question_answering: 0,
+                    machine_translation_systems: 0,
+                    spell_checkers: 0,
+                    search_systems: 0,
+                    voice_assistants: 0,
+                    educational_systems: 0,
+                    other_text_systems: 0
+                }
+
+                Object.entries(shona.nlp_tools).forEach(([category, list]) => {
+
+                    list.forEach(item => {
+
+                        item.type = "tool";
+                        item.category = category;
+
+                        tools_counter[category]++;
+
+                        allItems.push(item);
+
+                        tools++;
+
+
+                    });
+
+                });
+
+                Object.entries(shona.datasets).forEach(([category, list]) => {
+
+                    list.forEach(item => {
+
+                        item.type = "dataset";
+                        item.category = category;
+
+                        datasets_counter[category]++;
+                        allItems.push(item);
+
+                        datasets++;
+
+                    });
+
+                });
+
+                Object.entries(shona.applications).forEach(([category, list]) => {
+
+                    list.forEach(item => {
+
+                        item.type = "application";
+                        item.category = category;
+
+                        applications_counter[category]++;
+                        allItems.push(item);
+
+                        applications++;
+
+                    });
+
+                });
+
+                document.getElementById("tools").innerHTML = `
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${tools_counter.tokenisors}</h6>
+            <p class="text-muted mb-0 category-text">Tokenisor(s)</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${tools_counter.morphological_analysers}</h6>
+            <p class="text-muted mb-0 category-text">Morphological Analyser(s)</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${tools_counter.pos_taggers}</h6>
+            <p class="text-muted mb-0 category-text">POS tagger(s)</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${tools_counter.lemmatisers}</h6>
+            <p class="text-muted mb-0 category-text">Lemmatiser(s)</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${tools_counter.named_entity_recognisers}</h6>
+            <p class="text-muted mb-0 category-text">Named Entity Recogniser(s)</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${tools_counter.parsers}</h6>
+            <p class="text-muted mb-0 category-text">Parser(s)</p>
+        </div>
+    </div>
+</div>
+`;
+
+
+                document.getElementById("datasets").innerHTML = `
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${datasets_counter.lexical_resources}</h6>
+            <p class="text-muted mb-0 category-text">Lexical Resource(s)</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${datasets_counter.raw_corpora}</h6>
+            <p class="text-muted mb-0 category-text">Raw Corpus(es)</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${datasets_counter.annotated_corpora}</h6>
+            <p class="text-muted mb-0 category-text">Annotated Corpus(es)</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${datasets_counter.domain_specific_corpora}</h6>
+            <p class="text-muted mb-0 category-text">Domain Specific Resource(s)</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${datasets_counter.parallel_corpora}</h6>
+            <p class="text-muted mb-0 category-text">Parallel Corpus(es)</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${datasets_counter.literary_text}</h6>
+            <p class="text-muted mb-0 category-text">Literary Text(s)</p>
+        </div>
+    </div>
+</div>
+`;
+
+
+
+                document.getElementById("applications").innerHTML = `
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${applications_counter.chatbots}</h6>
+            <p class="text-muted mb-0 category-text">Chatbot(s)</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${applications_counter.question_answering}</h6>
+            <p class="text-muted mb-0 category-text">Question Answering System(s)</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${applications_counter.machine_translation_systems}</h6>
+            <p class="text-muted mb-0 category-text">Machine Translation System(s)</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${applications_counter.spell_checkers}</h6>
+            <p class="text-muted mb-0 category-text">Spell Checker(s)</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${applications_counter.search_systems}</h6>
+            <p class="text-muted mb-0 category-text">Search System(s)</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${applications_counter.voice_assistants}</h6>
+            <p class="text-muted mb-0 category-text">Voice Assistant(s)</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${applications_counter.educational_systems}</h6>
+            <p class="text-muted mb-0 category-text">Educational System(s)</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-4 col-lg-2">
+    <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body">
+            <h6 class="display-6 fw-bold card-title">${applications_counter.other_text_systems}</h6>
+            <p class="text-muted mb-0 category-text">Other Text System(s)</p>
+        </div>
+    </div>
+</div>
+
+
+
+`;
+
+
+
+                render();
+            });
+
+
+
+        function badge(a) {
+
+            if (!a) return "";
+
+            let cls = "bg-secondary";
+
+            const x = a.toLowerCase();
+
+            if (x.includes("rule")) cls = "bg-primary";
+            else if (x.includes("machine")) cls = "bg-success";
+            else if (x.includes("deep")) cls = "bg-purple";
+            else if (x.includes("statistical")) cls = "bg-warning text-dark";
+
+            return `<span class="badge rounded-pill ${cls}">${a}</span>`;
+
+        }
+
+        function render() {
+
+            const q = document.getElementById("search").value.toLowerCase();
+
+            const filter = document.getElementById("typeFilter").value;
+
+            const results = document.getElementById("results");
+
+            results.innerHTML = "";
+
+            allItems
+                .filter(i => {
+
+                    const search = (JSON.stringify(i)).toLowerCase();
+
+                    const matchesSearch = search.includes(q);
+
+                    const matchesType =
+                        filter === "all" || filter === i.type;
+
+                    return matchesSearch && matchesType;
+
+                })
+                .forEach(item => {
+
+                    results.innerHTML += `
+<div class="col">
+    <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+            <small class="text-uppercase text-muted">${item.category.replaceAll("_", " ")}</small>
+
+        ${
+            item.link
+                ? `
+                    <a href="${item.link}" target="_blank" class="stretched-link">
+                        <h6 class="h5 mt-2 mb-3 card-title">${item.title}</h6>
+                    </a>
+                `
+                : `
+                    <h6 class="h5 mt-2 mb-3 card-title">${item.title}</h6>
+                `
+        }
+            
+
+            ${badge(item.approach)}
+
+            <span class="small">
+                ${item.model_or_algorithm ? `${item.model_or_algorithm}` : ""}
+                ${item.task ? `${item.task}` : ""}
+            </span>
+
+            <p class="mt-3 mb-0">${item.description}</p>
+            <div class="mt-3 small">
+                
+                ${item.size ? `<div class="mb-2"><strong>Size:</strong> ${item.size}</div>` : ""}
+                ${item.period ? `<div class="mb-2"><strong>Period:</strong> ${item.period}</div>` : ""}
+
+                ${item.sources && item.sources.length ? `
+    <div class="mt-3 small text-muted">
+        ${item.sources.map((source, index) => `
+            <div>[${index + 1}] ${source}</div>
+        `).join("")}
+    </div>
+` : ""}
+            </div>
+        </div>
+    </div>
+</div>
+`;
+
+                });
+
+        }
+
+        document.getElementById("search")
+            .addEventListener("keyup", render);
+
+        document.getElementById("typeFilter")
+            .addEventListener("change", render);
+
+    </script>
+
+</body>
+
+</html>
