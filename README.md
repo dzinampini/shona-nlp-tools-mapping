@@ -4,7 +4,7 @@ An open, community-maintained catalogue of **Shona Natural Language Processing (
 
 The goal of this project is to provide a single, searchable location for researchers, students, developers, and organisations interested in Shona language technologies.
 
----
+
 
 # Study Aim
 
@@ -12,7 +12,7 @@ This review aims to systematically review and map the existing ecosystem of Shon
 
 The project consolidates information from academic literature and publicly available resources into a structured database that can be easily searched and expanded by the community.
 
----
+
 
 # Why this Project?
 
@@ -26,7 +26,7 @@ By creating an openly accessible ecosystem map, this project aims to:
 - Encourage collaboration between researchers and developers.
 - Support future development of Shona language technologies.
 
----
+
 
 # Repository Structure
 
@@ -38,7 +38,7 @@ By creating an openly accessible ecosystem map, this project aims to:
 └── assets/
 ```
 
----
+
 
 # Contributing
 
@@ -46,7 +46,7 @@ Contributions are welcome from researchers, developers, linguists, students, and
 
 Please ensure that all additions are supported by reliable references.
 
----
+
 
 # How to Update the Dataset
 
@@ -115,7 +115,7 @@ git push origin add-new-resource
 
 8. Submit a Pull Request.
 
----
+
 
 # Contribution Guidelines
 
@@ -127,7 +127,7 @@ Please ensure that:
 - Sources are included for every entry.
 - Existing entries are updated rather than duplicated whenever possible.
 
----
+
 
 # Reporting Errors
 
@@ -141,7 +141,7 @@ If you notice:
 
 please open a GitHub Issue or contact the project maintainer.
 
----
+
 
 # Contact
 
@@ -150,7 +150,7 @@ For questions, corrections, collaborations, or contributions:
 **Email**: dzinampini@gmail.com
 **Call/WhatsApp**:  +263 774 756 502 or +267 74 099 422
 
----
+
 
 # Citation
 
@@ -158,7 +158,7 @@ If you use this ecosystem map in academic work, please cite the accompanying pub
 
 Additionally, please cite the original publications describing each tool or dataset where appropriate.
 
----
+
 
 # License
 
@@ -168,7 +168,7 @@ Please note that the original NLP tools, datasets, and publications referenced i
 
 This repository serves as an index and ecosystem map of those resources and does not claim ownership of the referenced works.
 
----
+
 
 # Acknowledgements
 
@@ -176,4 +176,3 @@ This project exists because of the many researchers, developers, linguists, and 
 
 Community contributions are warmly welcomed.
 
----
